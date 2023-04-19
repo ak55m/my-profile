@@ -2,6 +2,7 @@ import React from 'react';
 import BankofAmerica from './img/BofA.png';
 import TexasTechU from './img/TexasTech.png';
 import Akeem from './img/akeem.jpeg';
+import Leetcode from './img/leetcode.png'
 
 
 const Experience = () => {
@@ -118,6 +119,30 @@ const Experience = () => {
                     <div className="push_main">
                     <div className="push_person">Weather Application (click notification)</div>
                         <p className="push_text">OpenWeather Api as backend and react js as frontend.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+
+        <a href="https://akeem-mohammed.netlify.app">
+        <div className="push_wrapper" >
+            <div className="push_box">
+                <div className="push_content">
+                    <div className="push_top">
+                        <div className="col">
+                            <div className="push_imgwrap">
+                                <img className="push_icon" src={Leetcode} alt=""/>
+                            </div>
+                            <span className="push_title">leetCode</span>
+                        </div>
+                        <div className="col">
+                            <div className="push_time">December, 2021</div>
+                        </div>
+                    </div>
+                    <div className="push_main">
+                    <div className="push_person">leetCode Exercises</div>
+                        <p className="push_text">These are some of my leetCode exercises.</p>
                     </div>
                 </div>
             </div>
