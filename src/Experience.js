@@ -26,7 +26,7 @@ const Experience = () => {
                     </div>
                     <div className="push_main">
                     <div className="push_person">Incoming Software Engineer Intern @ Bank of America</div>
-                        <p className="push_text">Will be working with the Anti-Money Laundering Technology Team.....</p>
+                        <p className="push_text">Will be working with the Anti-Money Laundering Data Technology Team.....</p>
                     </div>
                 </div>
             </div>
