@@ -25,8 +25,10 @@ const Experience = () => {
                         </div>
                     </div>
                     <div className="push_main">
-                    <div className="push_person">Incoming Software Engineer Intern @ Bank of America</div>
-                        <p className="push_text">Will be working with the Anti-Money Laundering Data Technology Team.....</p>
+                    <div className="push_person">Global Technology Summer Analyst Intern</div>
+                        <p className="push_text">Created a predictive model using logistic regression to evaluate wine quality using chemical attributes and sensory data.</p>
+                        <p className="push_text">Employed logistic regression to analyze physiological chemical properties, achieving an impressive 90% accuracy score.</p>
+                        <p className="push_text">Pioneered a user-friendly interface enabling users to input diverse physicochemical properties of wine for the purpose of quality assessment.</p>
                     </div>
                 </div>
             </div>
