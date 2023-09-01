@@ -21,7 +21,7 @@ const Experience = () => {
                             <span className="push_title">Bank of America</span>
                         </div>
                         <div className="col">
-                            <div className="push_time">june, 2023</div>
+                            <div className="push_time">june, 2023 - Aug, 2023</div>
                         </div>
                     </div>
                     <div className="push_main">
