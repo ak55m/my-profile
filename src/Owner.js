@@ -1,6 +1,6 @@
 import React from 'react';
 import Akeem from './img/akeem.jpeg';
-import ResumePdf from './pdf/pro_bono_BofA.pdf'; // import the PDF file
+import ResumePdf from './pdf/Mohammed_Akeem_2023.pdf'; // import the PDF file
 
 
 const Owner = () => {
