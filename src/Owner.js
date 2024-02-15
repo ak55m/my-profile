@@ -28,7 +28,7 @@ const Owner = () => {
                         <div className="push_person">Akeem Mohammed</div>
                         <p className="push_text">Master CS @ Florida State University</p>
                         <p className="push_text">Graduation: Fall 2025</p>
-                        <p className="push_text">Looking for full/ partime time roles | Ex Incoming Software Engineer Intern @ Bank of America</p>
+                        <p className="push_text">Looking for full/ partime time jobs | Ex Incoming Software Engineer Intern @ Bank of America</p>
                     </div>
                 </div>
             </div>
