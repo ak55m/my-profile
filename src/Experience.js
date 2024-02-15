@@ -10,6 +10,31 @@ const Experience = () => {
 
   return (
     <div className="ownerContainer">
+
+          <div className="push_wrapper">
+            <div className="push_box">
+                <div className="push_content">
+                    <div className="push_top">
+                        <div className="col">
+                            <div className="push_imgwrap">
+                                <img className="push_icon" src={BankofAmerica} alt=""/>
+                            </div>
+                            <span className="push_title">Bank of America</span>
+                        </div>
+                        <div className="col">
+                            <div className="push_time">june, 2023 - Aug, 2023</div>
+                        </div>
+                    </div>
+                    <div className="push_main">
+                    <div className="push_person">Global Technology Summer Analyst Intern</div>
+                        <p className="push_text">Created a predictive model using logistic regression to evaluate wine quality using chemical attributes and sensory data.</p>
+                        <p className="push_text">Employed logistic regression to analyze physiological chemical properties, achieving an impressive 90% accuracy score.</p>
+                        <p className="push_text">Pioneered a user-friendly interface enabling users to input diverse physicochemical properties of wine for the purpose of quality assessment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         <div className="push_wrapper">
             <div className="push_box">
                 <div className="push_content">
