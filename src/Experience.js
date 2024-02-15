@@ -27,9 +27,10 @@ const Experience = () => {
                     </div>
                     <div className="push_main">
                     <div className="push_person">Global Technology Summer Analyst Intern</div>
-                        <p className="push_text">Created a predictive model using logistic regression to evaluate wine quality using chemical attributes and sensory data.</p>
-                        <p className="push_text">Employed logistic regression to analyze physiological chemical properties, achieving an impressive 90% accuracy score.</p>
-                        <p className="push_text">Pioneered a user-friendly interface enabling users to input diverse physicochemical properties of wine for the purpose of quality assessment.</p>
+                        <p className="push_text">Collaborated on end-to-end ETL process with Data Technology team utilizing Autosys for efficient loading, monitored logs via secure SSH tunnel Putty Unix.</p>
+                        <p className="push_text">Employed Teradata Studio for optimized data file management, enhancing storage efficiency.</p>
+                        <p className="push_text">Validated cash advance and foreign check data in Teradata Studio (development mode) for quality.</p>
+                        <p className="push_text">Executed targeted data visualization via SQL queries, ensuring high data quality in the ETL process.</p>
                     </div>
                 </div>
             </div>
