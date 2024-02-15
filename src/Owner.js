@@ -1,6 +1,6 @@
 import React from 'react';
 import Akeem from './img/akeem.jpeg';
-import ResumePdf from './pdf/Mohammed_Akeem_2023.pdf'; // import the PDF file
+import ResumePdf from './pdf/Akeem_Computer_Science_Resume_cyber 3.docx.pdf'; // import the PDF file
 
 
 const Owner = () => {
@@ -26,9 +26,9 @@ const Owner = () => {
                     </div>
                     <div className="push_main">
                         <div className="push_person">Akeem Mohammed</div>
-                        <p className="push_text">CS @ Texas Tech University</p>
-                        <p className="push_text">Graduation: Fall 2023</p>
-                        <p className="push_text">Looking for full time roles | Ex Incoming Software Engineer Intern @ Bank of America</p>
+                        <p className="push_text">Master CS @ Florida State University</p>
+                        <p className="push_text">Graduation: Fall 2025</p>
+                        <p className="push_text">Looking for full/ partime time roles | Ex Incoming Software Engineer Intern @ Bank of America</p>
                     </div>
                 </div>
             </div>
