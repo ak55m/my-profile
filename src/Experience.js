@@ -47,12 +47,16 @@ const Experience = () => {
                             <span className="push_title">Texas Tech ATLC</span>
                         </div>
                         <div className="col">
-                            <div className="push_time">may, 2020</div>
+                            <div className="push_time">may, 2020 - dec, 2023</div>
                         </div>
                     </div>
                     <div className="push_main">
                     <div className="push_person">Lead Student Technician III (previously II)</div>
-                        <p className="push_text">Supervise 43 campus printers to ensure high uptime and proper functioning.</p>
+                        <p className="push_text">Supervised 43 campus printers to ensure high uptime and proper functioning.</p>
+                        <p className="push_text">Initiated the idea of having students work during the weekends to have necessary students during peak usage time.</p> 
+                        <p className="push_text">Collaborated on an inactivity script, automating user logout after a designated period of computer inactivity.</p>
+                        <p className="push_text">Led team of 5 to supervise school computers, mobile laptops and computers daily.</p>
+
                     </div>
                 </div>
             </div>
