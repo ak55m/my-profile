@@ -1,6 +1,6 @@
 import React from 'react';
 import Akeem from './img/akeem.jpeg';
-import ResumePdf from './pdf/Akeem_Computer_Science_Resume_cyber 3.docx.pdf'; // import the PDF file
+import ResumePdf from './pdf/New_Akeem_ResumeGrad3-2.pdf'; // import the PDF file
 
 
 const Owner = () => {
