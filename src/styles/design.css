@@ -1,0 +1,137 @@
+.my-div {
+    margin: auto;
+  }
+
+a {
+    text-decoration: none;
+  }
+  
+.row {
+    display: flex; /* equal height of the children */
+    overflow-y: scroll;
+  }
+
+/* this creates the padding of the text */
+.clockContainers{
+    margin: auto;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    width: 200px;
+    padding: 20px;
+    height: 60px;
+    /* background-color: black; */
+    /* background-color:rgba(0, 0, 0, 0.3); */
+    /* opacity: 0.4; */
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+    backdrop-filter: blur(8px); /* Chrome and Opera */
+    /* box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%); */
+    background-color: rgba(7, 7, 7, 0.50); 
+    display: block;
+    font-size: 5px;
+}
+
+/* this is the color of the timer */
+.clockContainers h1 {
+    color: white;
+    font-size: 20px;
+    margin-top: 1px;
+}
+
+.dateContainer {
+    margin: auto;
+    /* margin-left: 20px;
+    width: 200px;
+    padding: 20px;
+    height: 60px; */
+    /* background-color: black; */
+    /* background-color:rgb(249, 249, 249); */
+    /* opacity: 0.4; */
+    /* border-radius: 18px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); */
+    /* text-align: center; */
+}
+
+.dateContainer h1 {
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+
+}
+
+.Ownercontainer {
+    width: 30px;
+    /* margin-left: 100px; */
+}
+
+.push_wrapper {
+    margin-top: 15px;
+}
+
+.push_box {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+    position: relative;
+    border-radius: 25px;
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+    backdrop-filter: blur(8px); /* Chrome and Opera */
+    /* box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%); */
+    background-color: rgba(7, 7, 7, 0.50); 
+    padding: 10px 12px;
+    /* margin: 8px; */
+    margin-bottom: 15px;
+}
+
+.push_box:last-child {
+    display: block;
+}
+
+.push_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.push_top .col {
+    display: flex;
+    align-items: center;
+}
+
+.push_imgwrap {
+    margin: 2px 5px 0 0;
+}
+
+.push_icon {
+    max-width: 45px;
+    width: auto;
+    border-radius: 10px;
+
+}
+
+.push_title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.push_time {
+    font-size: 14px;
+    color: white;
+}
+
+.push_person {
+    font-weight: 900;
+    margin-bottom: 2px;
+    color: white;
+}
+
+.push_text {
+    color: white;
+    font-weight: 500;
+
+}
