@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaFileAlt, FaChartBar, FaMicroscope, FaAward, FaUniversity } from 'react-icons/fa';
+import { FaGraduationCap, FaChartBar, FaMicroscope, FaAward, FaUniversity } from 'react-icons/fa';
 
 const Research = () => {
   const researchAreas = [

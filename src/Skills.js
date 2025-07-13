@@ -5,7 +5,6 @@ import {
   FaJs, 
   FaPython, 
   FaJava, 
-  FaDatabase, 
   FaGitAlt,
   FaHtml5,
   FaCss3Alt,

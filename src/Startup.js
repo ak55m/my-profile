@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaUsers, FaChartLine, FaLightbulb, FaCode, FaGlobe, FaUtensils, FaStore } from 'react-icons/fa';
+import { FaRocket, FaLightbulb, FaCode, FaGlobe, FaUtensils, FaStore } from 'react-icons/fa';
 
 const Startup = () => {
   const startupProjects = [
