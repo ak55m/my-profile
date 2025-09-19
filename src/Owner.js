@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Akeem from './img/akeem.jpeg';
-import ResumePdf from './pdf/New_Akeem_ResumeGrad3-2.pdf';
+import ResumePdf from './pdf/Akeem_Resume_Grad.docx-2.pdf';
 
 const Owner = () => {
   return (
@@ -43,11 +43,11 @@ const Owner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           style={{
-            color: 'white',
+            color: '#111111',
             fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
             fontWeight: '700',
             marginBottom: '10px',
-            textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
+            textShadow: 'none'
           }}
         >
           Akeem Mohammed
@@ -58,7 +58,7 @@ const Owner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           style={{
-            color: 'rgba(255, 255, 255, 0.9)',
+            color: '#111111',
             fontSize: 'clamp(1rem, 3vw, 1.2rem)',
             marginBottom: '5px',
             fontWeight: '500'
@@ -72,7 +72,7 @@ const Owner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           style={{
-            color: 'rgba(255, 255, 255, 0.8)',
+            color: '#111111',
             fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
             marginBottom: '20px'
           }}
@@ -85,7 +85,7 @@ const Owner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           style={{
-            color: 'rgba(255, 255, 255, 0.9)',
+            color: '#111111',
             fontSize: 'clamp(0.9rem, 2.8vw, 1.1rem)',
             marginBottom: '30px',
             fontWeight: '500',
@@ -102,15 +102,16 @@ const Owner = () => {
           rel="noopener noreferrer"
           style={{
             display: 'inline-block',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
+            background: 'rgba(255,255,255,0.7)',
+            color: '#111111',
             padding: 'clamp(10px, 2.5vw, 12px) clamp(20px, 5vw, 30px)',
-            borderRadius: '25px',
+            borderRadius: '16px',
+            border: '1px solid rgba(0,0,0,0.08)',
             textDecoration: 'none',
             fontWeight: '600',
             fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
             transition: 'all 0.3s ease',
-            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+            boxShadow: '0 8px 24px rgba(0,0,0,0.08)'
           }}
           whileHover={{ 
             scale: 1.05,

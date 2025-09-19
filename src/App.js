@@ -11,6 +11,7 @@ import Startup from './Startup';
 import Research from './Research';
 import Contact from './Contact';
 import Navigation from './Navigation';
+import Github from './Github';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -22,6 +23,7 @@ function App() {
     projects: <Projects />,
     startup: <Startup />,
     research: <Research />,
+    github: <Github />,
     contact: <Contact />
   };
 

@@ -91,6 +91,16 @@ const Experience = () => {
       {/* Work Experience */}
       <motion.div className="section-container" variants={itemVariants}>
         <h2 className="section-title">Work Experience</h2>
+        <div style={{ textAlign: 'center', marginBottom: 16 }}>
+          <a
+            className="project-link"
+            href="https://www.linkedin.com/in/akeemmohammedutdedu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View LinkedIn Profile
+          </a>
+        </div>
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.company}
