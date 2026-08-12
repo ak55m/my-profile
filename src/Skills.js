@@ -11,8 +11,11 @@ import {
   FaNodeJs,
   FaDocker,
   FaAws,
-  FaPaypal,
-  FaTerminal
+  FaTerminal,
+  FaCode,
+  FaServer,
+  FaCuttlefish,
+  FaFileCode
 } from 'react-icons/fa';
 import { 
   SiMongodb, 
@@ -24,31 +27,48 @@ import {
   SiNgrok,
   SiDigitalocean,
   SiTeradata,
-  SiStripe
+  SiJira
 } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
     { name: 'React.js', icon: <FaReact />, level: 'Advanced' },
     { name: 'JavaScript', icon: <FaJs />, level: 'Advanced' },
-    { name: 'Python', icon: <FaPython />, level: 'Intermediate' },
-    { name: 'Java', icon: <FaJava />, level: 'Intermediate' },
+    { name: 'Python', icon: <FaPython />, level: 'Primary' },
+    { name: 'Java', icon: <FaJava />, level: 'Basic' },
+    { name: 'C#', icon: <FaCuttlefish />, level: 'Basic' },
+    { name: 'C++', icon: <FaCuttlefish />, level: 'Intermediate' },
     { name: 'PHP', icon: <SiPhp />, level: 'Intermediate' },
-    { name: 'HTML5', icon: <FaHtml5 />, level: 'Advanced' },
+    { name: 'HTML5', icon: <FaHtml5 />, level: 'Basic' },
     { name: 'CSS3', icon: <FaCss3Alt />, level: 'Advanced' },
     { name: 'Node.js', icon: <FaNodeJs />, level: 'Intermediate' },
-    { name: 'Express.js', icon: <SiExpress />, level: 'Intermediate' },
-    { name: 'MongoDB', icon: <SiMongodb />, level: 'Intermediate' },
-    { name: 'MySQL', icon: <SiMysql />, level: 'Intermediate' },
+    { name: 'Django', icon: <FaServer />, level: 'Basic' },
+    { name: 'Swift', icon: <FaCode />, level: 'Basic' },
+    { name: 'API Development', icon: <FaServer />, level: 'Basic' },
+    { name: 'COBOL Development', icon: <FaCode />, level: 'Basic' },
+    { name: 'CICS', icon: <FaTerminal />, level: 'Basic' },
+    { name: 'Jira', icon: <SiJira />, level: 'Basic' },
+    { name: 'REXX', icon: <FaCode />, level: 'Basic' },
+    { name: '.DAT', icon: <FaFileCode />, level: 'Basic' },
+    { name: 'SWIFT MT', icon: <FaServer />, level: 'Basic' },
+    { name: 'Job Control Language', icon: <FaTerminal />, level: 'Basic' },
+    { name: 'Express.js', icon: <SiExpress />, level: 'Basic' },
+    { name: 'MongoDB', icon: <SiMongodb />, level: 'Basic' },
+    { name: 'MySQL', icon: <SiMysql />, level: 'Basic' },
     { name: 'PostgreSQL', icon: <SiPostgresql />, level: 'Basic' },
     { name: 'Teradata', icon: <SiTeradata />, level: 'Basic' },
-    { name: 'Git', icon: <FaGitAlt />, level: 'Advanced' },
+    { name: 'Autosys', icon: <FaTerminal />, level: 'Basic' },
+    { name: 'FileZilla', icon: <FaFileCode />, level: 'Basic' },
+    { name: 'IDA Pro', icon: <FaCode />, level: 'Basic' },
+    { name: 'Ghidra', icon: <FaCode />, level: 'Basic' },
+    { name: 'OllyDbg', icon: <FaCode />, level: 'Basic' },
+    { name: 'Pandas', icon: <FaPython />, level: 'Basic' },
+    { name: 'Google Colab', icon: <FaCode />, level: 'Basic' },
+    { name: 'Git', icon: <FaGitAlt />, level: 'Basic' },
     { name: 'Docker', icon: <FaDocker />, level: 'Basic' },
     { name: 'AWS', icon: <FaAws />, level: 'Basic' },
     { name: 'DigitalOcean', icon: <SiDigitalocean />, level: 'Basic' },
-    { name: 'Firebase', icon: <SiFirebase />, level: 'Intermediate' },
-    { name: 'PayPal', icon: <FaPaypal />, level: 'Intermediate' },
-    { name: 'Stripe', icon: <SiStripe />, level: 'Intermediate' },
+    { name: 'Firebase', icon: <SiFirebase />, level: 'Basic' },
     { name: 'ngrok', icon: <SiNgrok />, level: 'Basic' },
     { name: 'PuTTY', icon: <FaTerminal />, level: 'Basic' }
   ];
@@ -98,4 +118,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

@@ -1,38 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #f5f7f6;
+  --muted: #a9b2af;
+  --line: rgba(231, 241, 237, 0.13);
+  --panel: rgba(20, 29, 27, 0.72);
+  --accent: #c7ff5e;
+  --accent-ink: #172109;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #0b100f; }
+
 body {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  background-color: #f2f2f7; /* iOS light grey system background */
-  color: #111111;
-  overflow-x: hidden;
+  min-width: 320px;
+  background: #0b100f;
+  color: var(--ink);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Force all text to black and remove any text shadows */
-:root { --text-color: #111111; }
-body, h1, h2, h3, h4, h5, h6, p, span, li, a, label, small, strong, em, button, input, textarea, select, div {
-  color: var(--text-color) !important;
-  text-shadow: none !important;
-}
+button, input, textarea { font: inherit; }
+button { color: inherit; }
+a { color: inherit; }
 
-.content {
-  background-color: transparent;
-}
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-.stage {
-  height: 100vh;
-  width: 100vw;
-  overflow-y: scroll;
-  position: relative;
-  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
-}
-
+::selection { background: var(--accent); color: var(--accent-ink); }

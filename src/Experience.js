@@ -1,179 +1,73 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import BankofAmerica from './img/BofA.png';
-import TexasTechU from './img/TexasTech.png';
-import Akeem from './img/akeem.jpeg';
-import Leetcode from './img/leetcode.png';
 
-const Experience = () => {
-  const experiences = [
-    {
-      company: "Bank of America",
-      logo: BankofAmerica,
-      position: "Global Technology Summer Analyst Intern",
-      duration: "June 2023 - August 2023",
-      description: [
-        "Collaborated on end-to-end ETL process with Data Technology team utilizing Autosys for efficient loading, monitored logs via secure SSH tunnel Putty Unix.",
-        "Employed Teradata Studio for optimized data file management, enhancing storage efficiency.",
-        "Validated cash advance and foreign check data in Teradata Studio (development mode) for quality.",
-        "Executed targeted data visualization via SQL queries, ensuring high data quality in the ETL process."
-      ]
-    },
-    {
-      company: "Texas Tech ATLC",
-      logo: TexasTechU,
-      position: "Lead Student Technician III (previously II)",
-      duration: "May 2020 - December 2023",
-      description: [
-        "Supervised 43 campus printers to ensure high uptime and proper functioning.",
-        "Initiated the idea of having students work during the weekends to have necessary students during peak usage time.",
-        "Collaborated on an inactivity script, automating user logout after a designated period of computer inactivity.",
-        "Led team of 5 to supervise school computers, mobile laptops and computers daily."
-      ]
-    },
-    {
-      company: "Texas Tech Libraries",
-      logo: TexasTechU,
-      position: "Student Assistant Librarian",
-      duration: "June 2019",
-      description: [
-        "Spearheaded the adoption of an optimized methodology for space allocation on bookshelves.",
-        "Served daily traffic of up to 57 students at the front desk."
-      ]
-    }
-  ];
+const experiences = [
+  {
+    company: 'University of Texas at Dallas', location: 'Dallas, TX', role: 'Graduate Research Assistant for I-Ling Yen', period: 'Dec. 2025 - Present',
+    bullets: [
+      'Conducting systems-level research on UAV precision landing, evaluating the feasibility of autonomous operations on non-traditional landing surfaces under real-world conditions.',
+      'Coding the IMU-first autonomous control pipeline for UAV precision landing, integrating synchronized inertial-vision sensing, navigation frame alignment, and data-driven PD/PID control.'
+    ]
+  },
+  {
+    company: 'University of Texas at Dallas', location: 'Dallas, TX', role: 'Food Cashier', period: 'Aug. 2025 - Dec. 2025',
+    bullets: ['Handled customer payments and order processing in a fast-paced university dining environment.']
+  },
+  {
+    company: 'Bank of America', location: 'New York City, NY', role: 'Global Technology Summer Analyst Intern', period: 'June 2023 - Aug. 2023',
+    bullets: [
+      'Collaborated on an end-to-end ETL process with the Data Technology team, utilizing AutoSys for efficient loading and monitoring logs via secure SSH tunnel PuTTY/Unix.',
+      'Contributed to data quality initiatives using Teradata Studio to manage and optimize data storage and validate cash and foreign check records.',
+      'Executed targeted data visualization via SQL queries, ensuring high data quality in the ETL process.'
+    ]
+  },
+  {
+    company: 'Texas Tech University Advanced Technology Learning Center', location: 'Lubbock, TX', role: 'Lead Student Technician III', period: 'Nov. 2022 - Dec. 2023',
+    bullets: [
+      'Initiated a weekend staffing model to ensure adequate student coverage during peak and non-peak usage periods.',
+      'Collaborated on an inactive script, automating user logout after a designated period of computer inactivity.',
+      'Led a team of 5 to supervise school computers, mobile laptops, and desktops daily.'
+    ]
+  },
+  {
+    company: 'Texas Tech University Advanced Technology Learning Center', location: 'Lubbock, TX', role: 'Lead Student Technician II', period: 'May 2021 - Nov. 2022',
+    bullets: [
+      'Supervised 43 campus printers to ensure high uptime and proper functioning.',
+      'Networked at least 57 computers onto Texas Tech University’s intranet, running programmed scripts.',
+      'Utilized Quest KACE software to transmit patches and upgrade vulnerabilities through the KACE servers.'
+    ]
+  },
+  {
+    company: 'MTN Nigeria Communications', location: 'Remote', role: 'Software Engineer Intern', period: 'June 2022 - Aug. 2022',
+    bullets: ['Enhanced e-commerce platform with an improved UI using React.js and implemented Express.js to handle APIs of new products.']
+  },
+  {
+    company: 'Globacom Limited', location: 'Remote', role: 'Software Engineer Intern', period: 'June 2019 - Aug. 2019',
+    bullets: ['Optimized codebase by resolving inconsistencies, leading to a 30% speed improvement.']
+  }
+];
 
-  const projects = [
-    {
-      title: "E-commerce Website",
-      logo: Akeem,
-      description: "Node.js as backend and React.js as frontend.",
-      link: "https://pearlocal.com"
-    },
-    {
-      title: "Weather Application",
-      logo: Akeem,
-      description: "OpenWeather API as backend and React.js as frontend.",
-      link: "https://akeem-weather-app.netlify.app"
-    },
-    {
-      title: "LeetCode Exercises",
-      logo: Leetcode,
-      description: "These are some of my LeetCode exercises.",
-      link: "https://akeem-mohammed.netlify.app"
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
-  };
-
-  return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      {/* Work Experience */}
-      <motion.div className="section-container" variants={itemVariants}>
-        <h2 className="section-title">Work Experience</h2>
-        <div style={{ textAlign: 'center', marginBottom: 16 }}>
-          <a
-            className="project-link"
-            href="https://www.linkedin.com/in/akeemmohammedutdedu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View LinkedIn Profile
-          </a>
-        </div>
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={exp.company}
-            className="push_wrapper"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            <div className="push_box">
-              <div className="push_content">
-                <div className="push_top">
-                  <div className="col">
-                    <div className="push_imgwrap">
-                      <img className="push_icon" src={exp.logo} alt={exp.company} />
-                    </div>
-                    <span className="push_title">{exp.company}</span>
-                  </div>
-                  <div className="col">
-                    <div className="push_time">{exp.duration}</div>
-                  </div>
-                </div>
-                <div className="push_main">
-                  <div className="push_person">{exp.position}</div>
-                  {exp.description.map((desc, i) => (
-                    <p key={i} className="push_text">{desc}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      {/* Personal Projects */}
-      <motion.div className="section-container" variants={itemVariants}>
-        <h2 className="section-title">Personal Projects</h2>
-        {projects.map((project, index) => (
-          <motion.a
-            key={project.title}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: 'none' }}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: (index + 3) * 0.1 }}
-          >
-            <div className="push_wrapper">
-              <div className="push_box">
-                <div className="push_content">
-                  <div className="push_top">
-                    <div className="col">
-                      <div className="push_imgwrap">
-                        <img className="push_icon" src={project.logo} alt={project.title} />
-                      </div>
-                      <span className="push_title">{project.title}</span>
-                    </div>
-                    <div className="col">
-                      <div className="push_time">Click to view</div>
-                    </div>
-                  </div>
-                  <div className="push_main">
-                    <div className="push_person">{project.title}</div>
-                    <p className="push_text">{project.description}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.a>
-        ))}
-      </motion.div>
-    </motion.div>
-  );
-};
+const Experience = () => (
+  <motion.main className="experience-page" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
+    <header className="experience-heading">
+      <p className="section-kicker">Work experience</p>
+      <h2>Work shaped by<br /><em>systems and service.</em></h2>
+      <a className="button button-secondary" href="https://www.linkedin.com/in/akeemmohammedutdedu/" target="_blank" rel="noopener noreferrer">View LinkedIn <span>↗</span></a>
+    </header>
+    <section className="experience-timeline" aria-label="Work experience timeline">
+      {experiences.map((experience, index) => (
+        <motion.article className="experience-card" key={`${experience.company}-${experience.role}`} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.07 }}>
+          <div className="experience-index">0{index + 1}</div>
+          <div className="experience-content">
+            <div className="experience-topline"><span>{experience.location}</span><span>{experience.period}</span></div>
+            <h3>{experience.company}</h3>
+            <p className="experience-role">{experience.role}</p>
+            <ul>{experience.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
+          </div>
+        </motion.article>
+      ))}
+    </section>
+  </motion.main>
+);
 
 export default Experience;
