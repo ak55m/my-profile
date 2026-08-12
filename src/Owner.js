@@ -7,7 +7,7 @@ import ResumePdf from './pdf/Akeem_Resume_Grad.docx-2.pdf';
 const Owner = () => (
   <motion.main className="hero" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
     <section className="hero-copy">
-      <p className="eyebrow"><span /> Available for software engineering opportunities</p>
+      <p className="eyebrow"><span /> Available for aerial robotics research opportunities</p>
       <h1>Building thoughtful<br /><em>digital systems.</em></h1>
       <p className="hero-summary">I’m Akeem Mohammed, a Computer Science graduate student who enjoys understanding computer technologies and the synergies between them.</p>
       <div className="hero-actions">
