@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaLightbulb, FaCode, FaGlobe, FaUtensils, FaStore } from 'react-icons/fa';
+import { FaUtensils, FaStore } from 'react-icons/fa';
 
 const Startup = () => {
   const startupProjects = [
@@ -11,11 +11,7 @@ const Startup = () => {
       role: "Founder & CEO",
       duration: "2024 - Present",
       technologies: ["React.js", "Node.js", "Vercel", "Real-time Tracking", "Mobile-First"],
-      metrics: {
-        restaurants: "25+",
-        orders: "1000+",
-        waitlist: "500+"
-      },
+      highlight: "orderU has received interest from Base10 Ventures.",
       icon: <FaUtensils />,
       features: [
         "Phone-based ordering system",
@@ -32,11 +28,6 @@ const Startup = () => {
       role: "Founder & CEO",
       duration: "2019 - 2023",
       technologies: ["React.js", "Node.js", "MongoDB", "Payment Integration", "Location Services"],
-      metrics: {
-        users: "2000+",
-        sellers: "150+",
-        transactions: "5000+"
-      },
       icon: <FaStore />,
       features: [
         "Local seller-customer matching",
@@ -46,33 +37,6 @@ const Startup = () => {
         "Seller verification system"
       ],
       reason: "Discontinued due to larger companies entering the local commerce space"
-    }
-  ];
-
-  const achievements = [
-    {
-      title: "orderU - UT Dallas Student Innovation",
-      description: "Developed orderU as a student-led initiative to solve real restaurant industry challenges, currently in MVP phase with growing waitlist",
-      year: "2024",
-      icon: <FaLightbulb />
-    },
-    {
-      title: "PearLocal - Community Commerce Success",
-      description: "Successfully built and operated PearLocal for 4 years, serving 2000+ users and facilitating 5000+ local transactions before market consolidation",
-      year: "2019-2023",
-      icon: <FaCode />
-    },
-    {
-      title: "University Startup Competition",
-      description: "Won 1st place in UTD's annual startup pitch competition with innovative solutions for local business challenges",
-      year: "2023",
-      icon: <FaGlobe />
-    },
-    {
-      title: "TechCrunch Disrupt",
-      description: "Selected as one of 50 startups to present at TechCrunch Disrupt 2024 with orderU platform",
-      year: "2024",
-      icon: <FaRocket />
     }
   ];
 
@@ -182,7 +146,22 @@ const Startup = () => {
                 ))}
               </div>
               
-              <div style={{ 
+              {startup.highlight && (
+                <div style={{
+                  marginTop: '15px',
+                  padding: '12px 14px',
+                  background: 'rgba(199, 255, 94, 0.08)',
+                  border: '1px solid rgba(199, 255, 94, 0.2)',
+                  borderRadius: '4px',
+                  color: '#c7ff5e',
+                  fontSize: '0.86rem',
+                  lineHeight: '1.5'
+                }}>
+                  {startup.highlight}
+                </div>
+              )}
+
+              {startup.metrics && <div style={{
                 display: 'grid', 
                 gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', 
                 gap: '10px',
@@ -201,54 +180,7 @@ const Startup = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Achievements */}
-      <motion.div className="section-container" variants={itemVariants}>
-        <h2 className="section-title">Entrepreneurial Achievements</h2>
-        <div style={{ display: 'grid', gap: '20px' }}>
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={achievement.title}
-              style={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '15px',
-                padding: '20px',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '20px'
-              }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ 
-                background: 'rgba(255, 255, 255, 0.15)',
-                transform: 'translateX(5px)'
-              }}
-            >
-              <div style={{ fontSize: '2rem', color: '#fff' }}>
-                {achievement.icon}
-              </div>
-              <div style={{ flex: 1 }}>
-                <h3 style={{ color: 'white', marginBottom: '5px', fontSize: '1.2rem' }}>
-                  {achievement.title}
-                </h3>
-                <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '5px' }}>
-                  {achievement.description}
-                </p>
-                <span style={{ 
-                  color: 'rgba(255, 255, 255, 0.7)', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>
-                  {achievement.year}
-                </span>
-              </div>
+              </div>}
             </motion.div>
           ))}
         </div>
@@ -257,4 +189,4 @@ const Startup = () => {
   );
 };
 
-export default Startup; 
+export default Startup;

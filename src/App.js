@@ -6,7 +6,7 @@ import './styles/portfolio.css';
 import Owner from './Owner';
 import Experience from './Experience';
 import Skills from './Skills';
-import Projects from './Projects';
+import Technologies from './Technologies';
 import Startup from './Startup';
 import Research from './Research';
 import Contact from './Contact';
@@ -20,7 +20,7 @@ function App() {
     home: <Owner />,
     experience: <Experience />,
     skills: <Skills />,
-    projects: <Projects />,
+    technologies: <Technologies />,
     startup: <Startup />,
     research: <Research />,
     github: <Github />,

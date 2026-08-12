@@ -1,78 +1,35 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaBriefcase, FaCode, FaEnvelope, FaFlask, FaGithub, FaHome, FaLightbulb, FaTools } from 'react-icons/fa';
 
 const Navigation = ({ activeSection, setActiveSection }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const navItems = [
+    { id: 'home', icon: <FaHome /> },
+    { id: 'research', icon: <FaFlask /> },
+    { id: 'github', icon: <FaGithub /> },
+    { id: 'experience', icon: <FaBriefcase /> },
+    { id: 'skills', icon: <FaCode /> },
+    { id: 'technologies', icon: <FaTools /> },
+    { id: 'startup', icon: <FaLightbulb /> },
+    { id: 'contact', icon: <FaEnvelope /> }
+  ];
+  const select = (section) => { setActiveSection(section); setIsOpen(false); };
 
-  const navItems = ['home', 'experience', 'skills', 'projects', 'startup', 'research', 'github', 'contact'];
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const handleNavClick = (section) => {
-    setActiveSection(section);
-    setIsMobileMenuOpen(false); // Close mobile menu when item is clicked
-  };
-
-  return (
-    <>
-      {/* Desktop Navigation */}
-      <nav className="desktop-navigation">
-        {navItems.map((item) => (
-          <motion.button
-            key={item}
-            className={`nav-item ${activeSection === item ? 'active' : ''}`}
-            onClick={() => handleNavClick(item)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {item}
-          </motion.button>
-        ))}
-      </nav>
-
-      {/* Mobile Navigation Bar */}
-      <nav className="mobile-navigation">
-        <div className="mobile-nav-content">
-          <div className="mobile-nav-brand">
-            <h2>Portfolio</h2>
-          </div>
-          
-          <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </div>
-        </div>
-
-        {/* Mobile Dropdown Menu */}
-        <motion.div 
-          className="mobile-nav-dropdown"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ 
-            opacity: isMobileMenuOpen ? 1 : 0,
-            height: isMobileMenuOpen ? 'auto' : 0
-          }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-        >
-          {navItems.map((item) => (
-            <motion.button
-              key={item}
-              className={`mobile-nav-item ${activeSection === item ? 'active' : ''}`}
-              onClick={() => handleNavClick(item)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: isMobileMenuOpen ? 1 : 0, x: isMobileMenuOpen ? 0 : -20 }}
-              transition={{ delay: 0.1 }}
-            >
-              {item}
-            </motion.button>
-          ))}
-        </motion.div>
-      </nav>
-    </>
-  );
+  return <>
+    <nav className="desktop-navigation" aria-label="Portfolio navigation">
+      <button className="nav-brand" onClick={() => select('home')} aria-label="Go to home">AM<span>.</span></button>
+      <div className="nav-links">{navItems.map(({ id, icon }) => <button key={id} className={`nav-item ${activeSection === id ? 'active' : ''}`} onClick={() => select(id)}><small aria-hidden="true">{icon}</small>{id}</button>)}</div>
+      <a className="nav-contact" href="mailto:akeemmohammedutdedu@gmail.com">Let’s talk <span>↗</span></a>
+    </nav>
+    <nav className="mobile-navigation" aria-label="Mobile portfolio navigation">
+      <button className="nav-brand" onClick={() => select('home')}>AM<span>.</span></button>
+      <button className="mobile-menu-toggle" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen} aria-label="Toggle navigation">{isOpen ? <FaTimes /> : <FaBars />}</button>
+      <motion.div className="mobile-nav-dropdown" initial={false} animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}>
+        {navItems.map(({ id, icon }) => <button key={id} className={`mobile-nav-item ${activeSection === id ? 'active' : ''}`} onClick={() => select(id)}><span aria-hidden="true">{icon}</span>{id}</button>)}
+      </motion.div>
+    </nav>
+  </>;
 };
 
-export default Navigation; 
+export default Navigation;
