@@ -37,7 +37,15 @@ const Research = () => (
     </section>
 
     <section className="section-container">
-      <p className="section-kicker">Publication</p>
+      <p className="section-kicker">Publications</p>
+      <article className="publication-card">
+        <div className="publication-mark"><FaBookOpen /></div>
+        <div>
+          <div className="publication-meta"><span>Accepted full paper</span><span>2026</span></div>
+          <h3>A Distributed Energy Relay Framework for Sustainable Drone Missions</h3>
+          <p>IEEE ICPADS 2026</p>
+        </div>
+      </article>
       <article className="publication-card">
         <div className="publication-mark"><FaBookOpen /></div>
         <div>
