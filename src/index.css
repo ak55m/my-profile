@@ -5,8 +5,11 @@
   --muted: #a9b2af;
   --line: rgba(231, 241, 237, 0.13);
   --panel: rgba(20, 29, 27, 0.72);
-  --accent: #c7ff5e;
-  --accent-ink: #172109;
+  --neon: #c7ff5e;
+  --neon-rgb: 199, 255, 94;
+  --neon-text: #f0ffda;
+  --accent: var(--neon);
+  --accent-ink: #031317;
 }
 
 * { box-sizing: border-box; }
