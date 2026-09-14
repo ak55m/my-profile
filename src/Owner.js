@@ -27,7 +27,7 @@ const Owner = () => (
     </aside>
     <section className="about-panel">
       <p className="section-kicker">A little about me</p>
-      <p>PhD student researching the ecosystem of Drones as a Service (DaaS), including the deployment of UAV cyber-physical systems to perform aerial services.</p>
+      <p>PhD student researching the ecosystem of Drone as a Service (DaaS), as well as the deployment of physical payloads onto UAVs.</p>
       <div className="stat-row"><div><strong>Full stack</strong><span>Product builder</span></div><div><strong>DaaS</strong><span>Curious researcher</span></div><div><strong>Startups</strong><span>Entrepreneurial</span></div></div>
     </section>
   </motion.main>
