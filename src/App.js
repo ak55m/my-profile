@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './index.css';
 import './styles/design.css';
@@ -15,6 +15,14 @@ import Github from './Github';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    return savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  });
+
+  useEffect(() => {
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
   
   const sections = {
     home: <Owner />,
@@ -28,8 +36,8 @@ function App() {
   };
 
   return (
-    <div className="portfolio-container">
-      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+    <div className={`portfolio-container ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
+      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} setTheme={setTheme} />
       
       <motion.div 
         className="main-content"
