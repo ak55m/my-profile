@@ -73,7 +73,7 @@
 .mobile-actions { align-items: center; display: flex; gap: 9px; }
 .theme-toggle.icon-only { height: 36px; padding: 0; width: 38px; }
 
-.light-theme { --ink: #142019; --muted: #536158; --line: rgba(20, 32, 25, .18); --panel: rgba(255, 255, 255, .86); background: #eff5ec; color: var(--ink); }
+.light-theme { --ink: #142019; --muted: #536158; --line: rgba(20, 32, 25, .18); --panel: rgba(255, 255, 255, .86); --neon: #527f19; --neon-rgb: 82, 127, 25; --neon-text: #29450d; --accent: #426b13; --accent-ink: #ffffff; background: #eff5ec; color: var(--ink); }
 .light-theme::before { background: linear-gradient(rgba(var(--neon-rgb), .14) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--neon-rgb), .14) 1px, transparent 1px), radial-gradient(circle at 72% 16%, rgba(var(--neon-rgb), .17), transparent 25rem), radial-gradient(circle at 24% 82%, rgba(var(--neon-rgb), .1), transparent 22rem), linear-gradient(135deg, #f8fbf5 0%, #e8f0e4 49%, #f5f9f1 100%); opacity: .72; }
 .light-theme::after { background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(225, 236, 220, .24)), radial-gradient(ellipse at center, transparent 28%, rgba(191, 209, 184, .23) 100%); }
 .light-theme .desktop-navigation, .light-theme .mobile-navigation { background: rgba(248, 252, 245, .92); box-shadow: 12px 0 30px rgba(55, 89, 49, .1), inset -1px 0 16px rgba(var(--neon-rgb), .12); }
