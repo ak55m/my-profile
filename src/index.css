@@ -10,6 +10,7 @@
   --neon-text: #f0ffda;
   --accent: var(--neon);
   --accent-ink: #031317;
+  --ui-radius: 8px;
 }
 
 * { box-sizing: border-box; }
