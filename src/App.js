@@ -15,9 +15,10 @@ import Github from './Github';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('portfolio-theme');
-    return savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    return savedTheme || 'light';
   });
 
   useEffect(() => {
@@ -36,8 +37,8 @@ function App() {
   };
 
   return (
-    <div className={`portfolio-container ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
-      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} setTheme={setTheme} />
+    <div className={`portfolio-container ${theme === 'light' ? 'light-theme' : 'dark-theme'} ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} setTheme={setTheme} sidebarCollapsed={sidebarCollapsed} setSidebarCollapsed={setSidebarCollapsed} />
       
       <motion.div 
         className="main-content"

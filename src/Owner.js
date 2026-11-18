@@ -8,7 +8,7 @@ const Owner = () => (
   <motion.main className="hero" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
     <section className="hero-copy">
       <p className="eyebrow"><span /> Available for aerial robotics research opportunities</p>
-      <h1>Building thoughtful<br /><em>digital systems.</em></h1>
+      <h1>Building embodied<br /><em>aerial robots.</em></h1>
       <p className="hero-summary">I’m Akeem Mohammed, a PhD student in Computer Science who enjoys understanding computer technologies and the synergies between them.</p>
       <div className="hero-actions">
         <a className="button button-primary" href={ResumePdf} target="_blank" rel="noopener noreferrer">View résumé <FaArrowDown /></a>

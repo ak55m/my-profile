@@ -76,7 +76,7 @@ const Startup = () => {
               whileHover={{ y: -5 }}
             >
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                <div style={{ fontSize: '2rem', marginRight: '15px', color: '#fff' }}>
+                <div className="startup-icon">
                   {startup.icon}
                 </div>
                 <div>
@@ -87,19 +87,10 @@ const Startup = () => {
                     alignItems: 'center',
                     marginTop: '5px'
                   }}>
-                    <span style={{
-                      padding: '4px 12px',
-                      borderRadius: '15px',
-                      fontSize: '0.8rem',
-                      fontWeight: '500',
-                      background: startup.status === 'Active' ? 'rgba(76, 175, 80, 0.3)' : 
-                                startup.status === 'Defunct' ? 'rgba(244, 67, 54, 0.3)' : 'rgba(255, 193, 7, 0.3)',
-                      color: startup.status === 'Active' ? '#4CAF50' : 
-                             startup.status === 'Defunct' ? '#F44336' : '#FFC107'
-                    }}>
+                    <span className={`startup-status ${startup.status === 'Defunct' ? 'is-defunct' : 'is-active'}`}>
                       {startup.status}
                     </span>
-                    <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
+                    <span className="startup-duration">
                       {startup.duration}
                     </span>
                   </div>
@@ -109,33 +100,22 @@ const Startup = () => {
               <p className="project-description">{startup.description}</p>
               
               {startup.reason && (
-                <div style={{ 
-                  marginBottom: '15px', 
-                  padding: '10px', 
-                  background: 'rgba(244, 67, 54, 0.1)', 
-                  borderRadius: '8px',
-                  border: '1px solid rgba(244, 67, 54, 0.3)'
-                }}>
-                  <strong style={{ color: '#F44336', fontSize: '0.9rem' }}>Reason for Closure: </strong>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '0.9rem' }}>{startup.reason}</span>
+                <div className="startup-reason">
+                  <strong>Reason for Closure: </strong>
+                  <span>{startup.reason}</span>
                 </div>
               )}
               
-              <div style={{ marginBottom: '15px' }}>
-                <strong style={{ color: 'white', fontSize: '0.9rem' }}>Role: </strong>
-                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>{startup.role}</span>
+              <div className="startup-detail">
+                <strong>Role: </strong>
+                <span>{startup.role}</span>
               </div>
               
-              <div style={{ marginBottom: '15px' }}>
-                <strong style={{ color: 'white', fontSize: '0.9rem' }}>Key Features:</strong>
-                <ul style={{ 
-                  margin: '8px 0 0 0', 
-                  paddingLeft: '20px',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  fontSize: '0.9rem'
-                }}>
+              <div className="startup-detail">
+                <strong>Key Features:</strong>
+                <ul className="startup-features">
                   {startup.features.map((feature, i) => (
-                    <li key={i} style={{ marginBottom: '3px' }}>{feature}</li>
+                    <li key={i}>{feature}</li>
                   ))}
                 </ul>
               </div>
@@ -147,35 +127,18 @@ const Startup = () => {
               </div>
               
               {startup.highlight && (
-                <div style={{
-                  marginTop: '15px',
-                  padding: '12px 14px',
-                  background: 'rgba(199, 255, 94, 0.08)',
-                  border: '1px solid rgba(199, 255, 94, 0.2)',
-                  borderRadius: '4px',
-                  color: '#c7ff5e',
-                  fontSize: '0.86rem',
-                  lineHeight: '1.5'
-                }}>
+                <div className="startup-highlight">
                   {startup.highlight}
                 </div>
               )}
 
-              {startup.metrics && <div style={{
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', 
-                gap: '10px',
-                marginTop: '15px',
-                padding: '15px',
-                background: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '10px'
-              }}>
+              {startup.metrics && <div className="startup-metrics">
                 {Object.entries(startup.metrics).map(([key, value]) => (
-                  <div key={key} style={{ textAlign: 'center' }}>
-                    <div style={{ color: 'white', fontWeight: '600', fontSize: '1.1rem' }}>
+                  <div key={key} className="startup-metric">
+                    <div className="startup-metric-value">
                       {value}
                     </div>
-                    <div style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.8rem', textTransform: 'capitalize' }}>
+                    <div className="startup-metric-label">
                       {key}
                     </div>
                   </div>

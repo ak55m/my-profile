@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes, FaBriefcase, FaCode, FaEnvelope, FaFlask, FaGithub, FaHome, FaLightbulb, FaMoon, FaSun, FaTools } from 'react-icons/fa';
+import { FaBars, FaChevronLeft, FaChevronRight, FaTimes, FaBriefcase, FaCode, FaEnvelope, FaFlask, FaGithub, FaHome, FaLightbulb, FaMoon, FaRobot, FaSun, FaTools } from 'react-icons/fa';
 
-const Navigation = ({ activeSection, setActiveSection, theme, setTheme }) => {
+const Navigation = ({ activeSection, setActiveSection, theme, setTheme, sidebarCollapsed, setSidebarCollapsed }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { id: 'home', icon: <FaHome /> },
@@ -19,15 +19,16 @@ const Navigation = ({ activeSection, setActiveSection, theme, setTheme }) => {
 
   return <>
     <nav className="desktop-navigation" aria-label="Portfolio navigation">
-      <button className="nav-brand" onClick={() => select('home')} aria-label="Go to home">AM<span>.</span></button>
+      <div className="nav-header"><button className="nav-brand" onClick={() => select('home')} aria-label="Go to home" title="Home"><FaRobot /></button></div>
       <div className="nav-links">{navItems.map(({ id, icon }) => <button key={id} className={`nav-item ${activeSection === id ? 'active' : ''}`} onClick={() => select(id)}><small aria-hidden="true">{icon}</small>{id}</button>)}</div>
       <div className="nav-footer">
         <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}><span aria-hidden="true">{theme === 'dark' ? <FaSun /> : <FaMoon />}</span>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</button>
         <a className="nav-contact" href="mailto:akeemmohammedutdedu@gmail.com">Let’s talk <span>↗</span></a>
       </div>
+      <button className="sidebar-toggle" onClick={() => setSidebarCollapsed(!sidebarCollapsed)} aria-label={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'} title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}>{sidebarCollapsed ? <FaChevronRight /> : <FaChevronLeft />}</button>
     </nav>
     <nav className="mobile-navigation" aria-label="Mobile portfolio navigation">
-      <button className="nav-brand" onClick={() => select('home')}>AM<span>.</span></button>
+      <button className="nav-brand" onClick={() => select('home')} aria-label="Go to home" title="Home"><FaRobot /></button>
       <div className="mobile-actions"><button className="theme-toggle icon-only" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>{theme === 'dark' ? <FaSun /> : <FaMoon />}</button><button className="mobile-menu-toggle" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen} aria-label="Toggle navigation">{isOpen ? <FaTimes /> : <FaBars />}</button></div>
       <motion.div className="mobile-nav-dropdown" initial={false} animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}>
         {navItems.map(({ id, icon }) => <button key={id} className={`mobile-nav-item ${activeSection === id ? 'active' : ''}`} onClick={() => select(id)}><span aria-hidden="true">{icon}</span>{id}</button>)}
