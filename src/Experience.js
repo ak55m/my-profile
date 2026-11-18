@@ -51,7 +51,7 @@ const Experience = () => (
   <motion.main className="experience-page" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
     <header className="experience-heading">
       <p className="section-kicker">Work experience</p>
-      <h2>Work shaped by<br /><em>systems and service.</em></h2>
+      <h2>Experience across<br /><em>research and engineering.</em></h2>
       <a className="button button-secondary" href="https://www.linkedin.com/in/akeemmohammedutdedu/" target="_blank" rel="noopener noreferrer">View LinkedIn <span>↗</span></a>
     </header>
     <section className="experience-timeline" aria-label="Work experience timeline">

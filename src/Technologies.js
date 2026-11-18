@@ -1,8 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaCloud, FaDatabase, FaServer } from 'react-icons/fa';
+import { FaCode, FaCloud, FaDatabase, FaServer, FaRobot, FaBrain, FaCreditCard } from 'react-icons/fa';
 
 const technologies = [
+  {
+    title: 'Robotics & UAV Systems',
+    icon: <FaRobot />,
+    description: 'Simulation and software tools for autonomous aerial systems and embodied robotics.',
+    items: ['ROS', 'Gazebo', 'DJI SDK', 'Unity']
+  },
+  {
+    title: 'AI & Research',
+    icon: <FaBrain />,
+    description: 'Tools for experimentation, machine learning, and working with modern AI models.',
+    items: ['PyTorch', 'TensorFlow', 'Pandas', 'Google Colab', 'OpenRouter', 'Google Gemini']
+  },
   {
     title: 'Frontend',
     icon: <FaCode />,
@@ -34,9 +46,9 @@ const technologies = [
     items: ['ROS', 'Gazebo', 'Unity', 'DJI SDK']
   },
   {
-    title: 'Payments',
-    icon: <FaServer />,
-    description: 'Platforms for building reliable and secure online commerce experiences.',
+    title: 'Payments & Integrations',
+    icon: <FaCreditCard />,
+    description: 'Payment platforms and financial messaging used in digital commerce integrations.',
     items: ['PayPal', 'Stripe', 'SWIFT MT']
   }
 ];
