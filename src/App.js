@@ -14,8 +14,7 @@ import Navigation from './Navigation';
 import Github from './Github';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [activeSection, setActiveSection] = useState(() => localStorage.getItem('portfolio-section') || 'home');
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('portfolio-theme');
     return savedTheme || 'light';
@@ -24,6 +23,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem('portfolio-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    localStorage.setItem('portfolio-section', activeSection);
+  }, [activeSection]);
   
   const sections = {
     home: <Owner />,
@@ -37,8 +40,8 @@ function App() {
   };
 
   return (
-    <div className={`portfolio-container ${theme === 'light' ? 'light-theme' : 'dark-theme'} ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
-      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} setTheme={setTheme} sidebarCollapsed={sidebarCollapsed} setSidebarCollapsed={setSidebarCollapsed} />
+    <div className={`portfolio-container ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
+      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} theme={theme} setTheme={setTheme} />
       
       <motion.div 
         className="main-content"

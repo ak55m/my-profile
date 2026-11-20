@@ -65,7 +65,7 @@ const Startup = () => {
       variants={containerVariants}
     >
       {/* Startup Projects */}
-      <motion.div className="section-container" variants={itemVariants}>
+      <motion.div className="section-container startup-page" variants={itemVariants}>
         <h2 className="section-title">Startup Ventures</h2>
         <div className="projects-grid">
           {startupProjects.map((startup, index) => (

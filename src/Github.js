@@ -62,7 +62,7 @@ const Github = () => {
   }, [repos]);
 
   return (
-    <div className="section-container">
+    <div className="section-container github-page">
       <h2 className="section-title">GitHub Statistics</h2>
 
       {isLoading && <p>Loading GitHub data…</p>}
@@ -93,7 +93,7 @@ const Github = () => {
             </div>
           </div>
 
-          <div className="section-container" style={{ padding: 16 }}>
+          <div className="section-container github-language-panel" style={{ padding: 16 }}>
             <h3 style={{ textAlign: 'center', marginTop: 0, marginBottom: 12 }}>Top Languages</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'center' }}>
               {summary.topLangList.length === 0 && <span>No language data</span>}

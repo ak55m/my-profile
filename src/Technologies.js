@@ -7,7 +7,7 @@ const technologies = [
     title: 'Robotics & UAV Systems',
     icon: <FaRobot />,
     description: 'Simulation and software tools for autonomous aerial systems and embodied robotics.',
-    items: ['ROS', 'Gazebo', 'DJI SDK', 'Unity']
+    items: ['ROS', 'Gazebo', 'SO-101 Arm', 'ArduPilot', 'PX4', 'DJI SDK', 'Unity']
   },
   {
     title: 'AI & Research',
@@ -38,12 +38,6 @@ const technologies = [
     icon: <FaCloud />,
     description: 'Tools for shipping, operating, and evolving applications with confidence.',
     items: ['AWS', 'Docker', 'GitHub', 'Firebase', 'DigitalOcean', 'Railway', 'Cloudflare', 'SigNoz']
-  },
-  {
-    title: 'Robotics',
-    icon: <FaCode />,
-    description: 'Tools for simulation, autonomous systems, and intelligent physical products.',
-    items: ['ROS', 'Gazebo', 'Unity', 'DJI SDK']
   },
   {
     title: 'Payments & Integrations',

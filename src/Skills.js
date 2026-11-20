@@ -93,7 +93,7 @@ const Skills = () => {
 
   return (
     <motion.div 
-      className="section-container"
+      className="section-container skills-page"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

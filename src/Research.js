@@ -1,70 +1,64 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBookOpen, FaExternalLinkAlt, FaMicrochip, FaRocket } from 'react-icons/fa';
+import { FaBookOpen, FaExternalLinkAlt, FaGoogle, FaRocket } from 'react-icons/fa';
 
 const scholarProfile = 'https://scholar.google.com/citations?user=c5gz0x0AAAAJ&hl=en';
 
 const interests = [
   {
     icon: <FaRocket />,
-    title: 'Cyber-Physical Systems',
-    description: 'Exploring the connection between intelligent software systems and real-world autonomous platforms.'
-  },
-  {
-    icon: <FaMicrochip />,
-    title: 'Software Engineering',
-    description: 'Interested in how modern software components can be designed to work together as dependable systems.'
-  },
-  {
-    icon: <FaRocket />,
-    title: 'Autonomous UAVs',
-    description: 'Exploring autonomous unmanned aerial vehicles and the software systems that coordinate their operation.'
-  },
-  {
-    icon: <FaMicrochip />,
-    title: 'UAV Energy',
-    description: 'Interested in energy-aware UAV operation, including the technologies and tradeoffs that shape flight endurance.'
+    title: 'Aerial Bimanual Manipulation',
+    description: 'Interested in enabling autonomous aerial robots to interact with and manipulate objects in their surroundings using coordinated bimanual manipulators.'
   }
 ];
 
 const Research = () => (
   <motion.div className="research-page" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
-    <section className="section-container research-intro">
-      <p className="section-kicker">Research & publications</p>
-      <h2 className="section-title">Exploring intelligent systems in motion.</h2>
-      <p>My work sits at the intersection of software engineering, cyber-physical systems, and AI-assisted autonomous platforms.</p>
-      <a className="button button-secondary" href={scholarProfile} target="_blank" rel="noopener noreferrer">Google Scholar <FaExternalLinkAlt /></a>
-    </section>
+    <header className="research-masthead">
+      <section className="research-intro">
+        <p className="section-kicker">Research / Publications</p>
+        <h2 className="section-title">Autonomous systems<br /><em>for the physical world.</em></h2>
+        <p>My research explores how perception, planning, and control can enable autonomous aerial robots to interact with their surroundings using bimanual manipulators.</p>
+      </section>
+      <a className="scholar-card" href={scholarProfile} target="_blank" rel="noopener noreferrer">
+        <span className="scholar-card-top"><FaGoogle /><span>Research profile</span><FaExternalLinkAlt /></span>
+        <strong>Google Scholar</strong>
+        <span className="scholar-card-copy">Explore my publications and academic profile.</span>
+        <span className="scholar-card-link">Open profile <span aria-hidden="true">↗</span></span>
+      </a>
+    </header>
 
-    <section className="section-container">
-      <p className="section-kicker">Publications</p>
+    <section className="publication-section">
+      <div className="publication-section-heading"><div><p className="section-kicker">Selected work</p><h2 className="section-title">Publications</h2></div><span className="publication-count">02 / PAPERS</span></div>
       <article className="publication-card">
-        <div className="publication-mark"><FaBookOpen /></div>
-        <div>
+        <div className="publication-index">01</div>
+        <div className="publication-content">
           <div className="publication-meta"><span>Accepted full paper</span><span>2026</span></div>
           <h3>A Distributed Energy Relay Framework for Sustainable Drone Missions</h3>
-          <p>IEEE ICPADS 2026</p>
+          <p className="publication-venue">IEEE International Conference on Parallel and Distributed Systems (ICPADS 2026)</p>
         </div>
+        <div className="publication-mark"><FaBookOpen /></div>
       </article>
       <article className="publication-card">
-        <div className="publication-mark"><FaBookOpen /></div>
-        <div>
-          <div className="publication-meta"><span>arXiv preprint</span><span>2026</span></div>
+        <div className="publication-index">02</div>
+        <div className="publication-content">
+          <div className="publication-meta"><span>Accepted</span><span>2026</span></div>
           <h3>OmniDroneX: An LLM-Assisted Holistic Drone-as-a-Service Ecosystem</h3>
           <p className="publication-authors">I. Yen, A. Mohammed, F. Bastani, S. Y. Hwang</p>
-          <p>arXiv:2606.17510</p>
+          <p className="publication-venue">arXiv:2606.17510</p>
           <div className="publication-actions">
-            <a href="https://arxiv.org/abs/2606.17510" target="_blank" rel="noopener noreferrer">Read on arXiv <FaExternalLinkAlt /></a>
-            <a href={scholarProfile} target="_blank" rel="noopener noreferrer">View on Scholar <FaExternalLinkAlt /></a>
+            <a href="https://arxiv.org/abs/2606.17510" target="_blank" rel="noopener noreferrer">Read paper <FaExternalLinkAlt /></a>
+            <a href={scholarProfile} target="_blank" rel="noopener noreferrer">Google Scholar <FaExternalLinkAlt /></a>
           </div>
         </div>
+        <div className="publication-mark"><FaBookOpen /></div>
       </article>
     </section>
 
-    <section className="section-container">
+    <section className="section-container research-interest-section">
       <p className="section-kicker">Focus areas</p>
       <h2 className="section-title">Research interests.</h2>
-      <div className="research-grid">
+      <div className="research-grid research-grid-single">
         {interests.map((interest) => <article className="research-card" key={interest.title}><div>{interest.icon}</div><h3>{interest.title}</h3><p>{interest.description}</p></article>)}
       </div>
     </section>
