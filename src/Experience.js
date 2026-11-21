@@ -14,6 +14,10 @@ const experiences = [
     bullets: ['Handled customer payments and order processing in a fast-paced university dining environment.']
   },
   {
+    company: 'Florida State University', location: 'Tallahassee, FL', role: 'Graduate Research Assistant', period: 'Feb. 2024 - May 2024',
+    bullets: ['Conducted Git analysis in virtual reality.']
+  },
+  {
     company: 'Bank of America', location: 'New York City, NY', role: 'Global Technology Summer Analyst Intern', period: 'June 2023 - Aug. 2023',
     bullets: [
       'Collaborated on an end-to-end ETL process with the Data Technology team, utilizing AutoSys for efficient loading and monitoring logs via secure SSH tunnel PuTTY/Unix.',

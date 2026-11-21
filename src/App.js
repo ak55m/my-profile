@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './index.css';
 import './styles/design.css';
 import './styles/portfolio.css';
+import './styles/goaldex.css';
 import Owner from './Owner';
 import Experience from './Experience';
 import Skills from './Skills';
