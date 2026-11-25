@@ -101,6 +101,7 @@ h1, h2, h3, h4, .section-title { font-family: var(--font-display); }
 .eyebrow span { background: var(--gd-mint); box-shadow: 0 0 0 5px rgba(127,127,127,.12); }
 .hero h1 { font-size: clamp(3.6rem, 9vw, 8.5rem); font-weight: 700; letter-spacing: -.075em; line-height: .9; margin: 26px 0 22px; }
 .hero h1 em { color: var(--accent); font-family: var(--font-display); font-style: normal; font-weight: 600; }
+.hero-subtitle { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.45rem); line-height: 1.55; margin: 0 auto; max-width: 760px; }
 .hero-actions, .social-row { justify-content: center; }
 .hero-actions { margin-top: 30px; }
 .hero-actions .button { border-radius: 999px; min-height: 46px; padding: 13px 20px; }
@@ -242,15 +243,36 @@ h1, h2, h3, h4, .section-title { font-family: var(--font-display); }
 .theme-toggle.icon-only span { filter: none; }
 .light-theme .github-page.section-container,
 .dark-theme .github-page.section-container { background: transparent !important; border: 0; box-shadow: none; }
+.light-theme .research-interest-section, .dark-theme .research-interest-section {
+  background: transparent !important; border-color: var(--line);
+}
 .light-theme .skills-page.section-container, .dark-theme .skills-page.section-container,
 .light-theme .technologies-section.section-container, .dark-theme .technologies-section.section-container,
 .light-theme .startup-page.section-container, .dark-theme .startup-page.section-container {
   background: transparent !important; border: 0; box-shadow: none;
 }
+.light-theme .skills-page .skill-card, .dark-theme .skills-page .skill-card {
+  background: var(--panel) !important; border-color: var(--line); color: var(--ink);
+}
+.light-theme .technologies-section .technology-card,
+.dark-theme .technologies-section .technology-card {
+  background: var(--panel) !important; border-color: var(--line); color: var(--ink);
+}
+.light-theme .technologies-section .technology-card:hover,
+.dark-theme .technologies-section .technology-card:hover {
+  background: var(--panel) !important; border-color: var(--muted); box-shadow: 0 14px 32px rgba(0,0,0,.09);
+}
+.light-theme .startup-page .project-card, .dark-theme .startup-page .project-card {
+  background: var(--panel) !important; border-color: var(--line); color: var(--ink);
+}
+.light-theme .startup-page .project-card:hover, .dark-theme .startup-page .project-card:hover {
+  background: var(--panel) !important; border-color: var(--muted); box-shadow: 0 14px 32px rgba(0,0,0,.09);
+}
 @media (max-width: 560px) {
   :root { --page-gutter: 22px; }
   .main-content, .sidebar-collapsed .main-content { padding-left: var(--page-gutter) !important; padding-right: var(--page-gutter) !important; }
   .hero h1 { font-size: clamp(3rem, 13vw, 4.6rem); }
+  .hero-subtitle { font-size: 1rem; }
   .about-panel > p:not(.section-kicker) { font-size: 1.4rem; }
   .section-container { padding: 0; }
   .publication-section .publication-card { grid-template-columns: 22px minmax(0,1fr); }
