@@ -1,16 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBookOpen, FaExternalLinkAlt, FaGoogle, FaRocket } from 'react-icons/fa';
+import { FaBookOpen, FaExternalLinkAlt, FaGoogle } from 'react-icons/fa';
 
 const scholarProfile = 'https://scholar.google.com/citations?user=c5gz0x0AAAAJ&hl=en';
-
-const interests = [
-  {
-    icon: <FaRocket />,
-    title: 'Aerial Bimanual Manipulation',
-    description: 'Interested in enabling autonomous aerial robots to interact with and manipulate objects in their surroundings using coordinated bimanual manipulators.'
-  }
-];
 
 const Research = () => (
   <motion.div className="research-page" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
@@ -55,13 +47,6 @@ const Research = () => (
       </article>
     </section>
 
-    <section className="section-container research-interest-section">
-      <p className="section-kicker">Focus areas</p>
-      <h2 className="section-title">Research interests.</h2>
-      <div className="research-grid research-grid-single">
-        {interests.map((interest) => <article className="research-card" key={interest.title}><div>{interest.icon}</div><h3>{interest.title}</h3><p>{interest.description}</p></article>)}
-      </div>
-    </section>
   </motion.div>
 );
 
